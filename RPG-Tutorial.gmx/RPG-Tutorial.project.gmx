@@ -12,12 +12,18 @@
     <sprite>sprites\spr_player_back</sprite>
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_player_left</sprite>
+    <sprite>sprites\spr_bush</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bk_grass</background>
+    <background>background\bk_grass2</background>
+    <background>background\bk_dirt</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_bush</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>
