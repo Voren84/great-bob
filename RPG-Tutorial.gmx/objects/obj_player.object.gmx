@@ -27,8 +27,12 @@
             <kind>1</kind>
             <string>///Fixed Rotation
 phy_fixed_rotation = true;
-spd = 2;
-image_speed = 0
+spd_anim = .2;
+spd_move = 4;
+image_speed = 0;
+scr_get_input();
+
+state = scr_move_state;
 </string>
           </argument>
         </arguments>
@@ -52,41 +56,56 @@ image_speed = 0
           <argument>
             <kind>1</kind>
             <string>///Move Player in Step Event
-//Move Left
-spd_anim = .23
-spd_move = 4
-
-if (keyboard_check(vk_left)){
-    phy_position_x -= spd_move;
-    sprite_index = spr_player_left;
-    image_speed = spd_anim;
-}
-
-///Move Right
-if (keyboard_check(vk_right)){
-    phy_position_x += spd_move;
-    sprite_index = spr_player_right;
-    image_speed = spd_anim;
-}
-
-///Move Up
-if (keyboard_check(vk_up)){
-    phy_position_y -= spd_move;
-    sprite_index = spr_player_back;
-    image_speed = spd_anim;
-}
-
-///Move Down
-if (keyboard_check(vk_down)){
-    phy_position_y += spd_move;
-    sprite_index = spr_player_front;
-    image_speed = spd_anim;
-}
-
-if not(keyboard_check(vk_up) or keyboard_check(vk_down) or keyboard_check(vk_left) or keyboard_check(vk_right)){
-    image_speed = 0;
-    image_index = 0
-}
+script_execute(state);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw the shadow
+draw_sprite(spr_player_shadow, image_index, x,y);
+draw_self();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="70">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set the frozen state
+state = scr_frozen_state;
 </string>
           </argument>
         </arguments>
@@ -105,9 +124,9 @@ if not(keyboard_check(vk_up) or keyboard_check(vk_down) or keyboard_check(vk_lef
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>8,4</point>
-    <point>24,4</point>
-    <point>24,32</point>
-    <point>8,32</point>
+    <point>2,12</point>
+    <point>12,12</point>
+    <point>12,20</point>
+    <point>2,20</point>
   </PhysicsShapePoints>
 </object>
