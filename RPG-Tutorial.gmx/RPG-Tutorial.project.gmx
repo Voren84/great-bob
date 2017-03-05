@@ -17,6 +17,7 @@
     <sprite>sprites\spr_char_right</sprite>
     <sprite>sprites\spr_char_left</sprite>
     <sprite>sprites\spr_char_shadow</sprite>
+    <sprite>sprites\spr_char_up</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_grass</background>

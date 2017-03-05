@@ -25,7 +25,7 @@ if (len == 0) image_index = 0;
 if (vspd > 0){
 sprite_index = spr_char_right;
 } else if (vspd < 0){
-sprite_index = spr_char_left;
+sprite_index = spr_char_up;
 }
 //Horizontal sprites
 if (hspd > 0){
