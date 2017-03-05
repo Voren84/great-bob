@@ -19,6 +19,7 @@
     <background>background\bk_grass</background>
     <background>background\bk_grass2</background>
     <background>background\bk_dirt</background>
+    <background>background\bg_grass</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
