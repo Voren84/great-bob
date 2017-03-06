@@ -22,16 +22,30 @@ image_speed = spd_anim;
 if (len == 0) image_index = 0;
 
 //Vertical sprites
-if (vspd > 0){
-sprite_index = spr_char_right;
-} else if (vspd < 0){
-sprite_index = spr_char_up;
-}
-//Horizontal sprites
-if (hspd > 0){
-sprite_index = spr_char_right;
-} else if (hspd < 0){
-sprite_index = spr_char_left;
-}
+//if (vspd > 0){
+//sprite_index = spr_char_left;
+//} else if (vspd < 0){
+//sprite_index = spr_char_up;
+//}
+////Horizontal sprites
+//if (hspd > 0){
+//sprite_index = spr_char_right;
+//} else if (hspd < 0){
+//sprite_index = spr_char_left;
+//}
 
-
+if (hspd >= 0 and vspd < 0){
+    sprite_index = spr_char_up_right;
+}
+else if (hspd < 0 and vspd < 0){
+    sprite_index = spr_char_up_left;
+}
+else if (hspd > 0 and vspd >= 0){
+    sprite_index = spr_char_right;
+}
+else if (hspd < 0 and vspd >= 0){
+    sprite_index = spr_char_left;
+}
+else if (hspd = 0 and vspd > 0){
+    sprite_index = spr_char_right;
+}
