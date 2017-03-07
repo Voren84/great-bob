@@ -19,6 +19,8 @@
     <sprite>sprites\spr_char_shadow</sprite>
     <sprite>sprites\spr_char_up_right</sprite>
     <sprite>sprites\spr_char_up_left</sprite>
+    <sprite>sprites\spr_shack_in</sprite>
+    <sprite>sprites\spr_shack_out</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_grass</background>
@@ -37,6 +39,8 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_bush</object>
     <object>objects\obj_view</object>
+    <object>objects\obj_shack</object>
+    <object>objects\obj_shack_out</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>
